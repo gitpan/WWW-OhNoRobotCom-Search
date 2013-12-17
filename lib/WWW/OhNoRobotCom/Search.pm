@@ -3,19 +3,19 @@ package WWW::OhNoRobotCom::Search;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Carp;
 use URI;
 use LWP::UserAgent;
 use HTML::TokeParser::Simple;
 use HTML::Entities;
-use base 'Class::Data::Accessor';
-__PACKAGE__->mk_classaccessors qw(
-    ua
+use base 'Class::Accessor::Grouped';
+__PACKAGE__->mk_group_accessors( simple =>
+    qw/ua
     error
     results
-);
+/);
 
 sub new {
     my $class = shift;
@@ -181,6 +181,8 @@ sub _set_error {
 1;
 
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

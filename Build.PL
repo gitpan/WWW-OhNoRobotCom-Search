@@ -17,9 +17,14 @@ my $builder = Module::Build->new(
         'HTML::TokeParser::Simple' => 3.15,
         'HTML::Entities'           => 1.35,
         'Class::Data::Accessor'    => 0.04001,
+        'perl' => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'WWW-OhNoRobotCom-Search-*' ],
     create_makefile_pl => 'traditional',
 );
+if ( $ENV{RELEASE_TESTING} ) {
+    system('pod2text lib/WWW/OhNoRobotCom/Search.pm > README');
+}
 
 $builder->create_build_script();

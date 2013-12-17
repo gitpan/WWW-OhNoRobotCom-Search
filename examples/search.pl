@@ -8,7 +8,7 @@ die "Usage: perl searc.pl <xkcd_search_term>\n"
 
 my $Term = shift;
 
-use lib '../lib';
+use lib qw(../lib  lib);
 use WWW::OhNoRobotCom::Search;
 my $site = WWW::OhNoRobotCom::Search->new;
 
