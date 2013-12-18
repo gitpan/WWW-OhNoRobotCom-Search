@@ -1,5 +1,8 @@
 Revision history for WWW-OhNoRobotCom-Search
 
+0.003   2013-12-18
+        - Fixed broken prereqs and tests
+
 0.002   2013-12-16
         - Minor fixes to comply with the specs and Kwalitee game
         - Added autogeneration of README from POD

@@ -7,7 +7,7 @@ WriteMakefile
   'VERSION_FROM' => 'lib/WWW/OhNoRobotCom/Search.pm',
   'PREREQ_PM' => {
                    'Carp' => '1.04',
-                   'Class::Data::Accessor' => '0.04001',
+                   'Class::Accessor::Grouped' => 0,
                    'HTML::Entities' => '1.35',
                    'HTML::TokeParser::Simple' => '3.15',
                    'LWP::UserAgent' => '2.036',

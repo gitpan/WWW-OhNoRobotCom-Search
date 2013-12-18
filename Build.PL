@@ -16,7 +16,7 @@ my $builder = Module::Build->new(
         'LWP::UserAgent'           => 2.036,
         'HTML::TokeParser::Simple' => 3.15,
         'HTML::Entities'           => 1.35,
-        'Class::Data::Accessor'    => 0.04001,
+        'Class::Accessor::Grouped'    => 0,
         'perl' => '5.006',
     },
     configure_requires => { 'Module::Build' => 0 },
